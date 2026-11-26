@@ -2,8 +2,6 @@
 
 ## Project Overview
 
-This project demonstrates a practical network troubleshooting investigation performed in a virtualized Windows domain environment.
-
 The scenario involves a user reporting that their Windows 11 workstation cannot access the internet.
 
 The objective was to identify the connectivity problem through systematic troubleshooting using Windows CMD, PowerShell, IP configuration analysis, DNS diagnostics and firewall inspection.
@@ -97,15 +95,16 @@ Observed configuration:
 
 Observation: The workstation had an assigned IPv4 address, gateway and internal DNS server.
 
-### 6. DNS Resolution Test
+### 6. DNS Resolution Test with internal (DC) and external site
 
 Command:
 
 ```cmd
-nslookup google.com
+nslookup soc-ad.soc.lab 192.168.1.101
+nslookup google.com 192.168.1.101
 ```
 
-Result: DNS resolution failed.
+Result: DNS resolution with internal Domain controller success but external site failed.
 
 Observation: The workstation could not resolve the requested external hostname.
 
