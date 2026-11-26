@@ -100,7 +100,7 @@ Observation: The workstation had an assigned IPv4 address, gateway and internal 
 Command:
 
 ```cmd
-nslookup soc-ad.soc.lab 192.168.1.101
+nslookup WIN11.soc.lab 192.168.1.101
 nslookup google.com 192.168.1.101
 ```
 
